@@ -121,7 +121,7 @@
   - another way is making the component keep a boolean state and toggling that state via button
 
 #Error: The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.
-- I was going to do a comparison between non animated and animated elements
+- I was going to do a comparison between non animated vs animated elements
 - Their datas will change from one value to the next
 - The difference will be in how they get from one point to the next
 - My hypothesis was that one will be abrupt and the other will be eased into the end point
@@ -132,8 +132,20 @@
 - with no animation, the movement is just an abrupt point a to point b
 - with animation, the movement is eased between point a to point b
 
+#Tying it all back
+- Okay, so to get back to react, react will have data changes, which changes the state, which changes the display
+- without animation, the display changes are abrupt
+- with animation, the display changes are smoothed and eased in
+- the data changes are independent of react spring, it will happen
+- what react spring adds into react is the inbetweens of those data changes
+- react is just concerned with data change between 
+  -0      -> 1
 
+- with react spring, the data change is now 
+  - 0     -> 0.25 
+  - 0.25  -> 0.5 
+  - 0.5   -> 0.75 
+  - 0.75  -> 1
 
-
-
+-I think
 
