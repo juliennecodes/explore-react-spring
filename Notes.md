@@ -119,7 +119,19 @@
 - you can induce change of data in a component in different ways
   - one way is using from property and to property
   - another way is making the component keep a boolean state and toggling that state via button
-  
+
+#Error: The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.
+- I was going to do a comparison between non animated and animated elements
+- Their datas will change from one value to the next
+- The difference will be in how they get from one point to the next
+- My hypothesis was that one will be abrupt and the other will be eased into the end point
+- However, I was treating style like you would an html element so I got the error. I think I need to read more on styling JSX.
+
+#Experiment findings
+- Okay, so I think react spring is doing the inbetweens
+- with no animation, the movement is just an abrupt point a to point b
+- with animation, the movement is eased between point a to point b
+
 
 
 

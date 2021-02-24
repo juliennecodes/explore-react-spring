@@ -6,6 +6,7 @@ import { FontSize } from "./components/FontSize";
 import {Rotate} from './components/Rotate';
 import { TransformTranslate } from "./components/TransformTranslate";
 import { Rotate30 } from "./components/Rotate30";
+import { Comparison } from "./components/Comparison";
 
 function App() {
   const fadeIn = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
@@ -21,6 +22,7 @@ function App() {
       <Rotate />
       <TransformTranslate />
       <Rotate30 />
+      <Comparison />
     </div>
   );
 }
