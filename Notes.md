@@ -149,3 +149,5 @@
 
 -I think
 
+#So whenever there is data change, which means state change, which means ui change, there is an opportunity for react spring animation
+
