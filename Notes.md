@@ -151,3 +151,80 @@
 
 #So whenever there is data change, which means state change, which means ui change, there is an opportunity for react spring animation
 
+#Notes on an article from 2018 
+- https://medium.com/@drcmda/hooks-in-react-spring-a-tutorial-c6c436ad7ee4#:~:text=Additionally%20useSpring%20returns%20an%20updater,are%20dealing%20with%20event%20input.
+- useSpring takes raw values (keyframes?)
+- useSpring returns animated values (inbetweens?)
+- animated values are bound to a view (what is being animated?)
+- additionally, useSpring returns an updater, similar to the setState in useState
+- the spring updater does not cause the component to re-render
+- spring is updated by the updater
+- view (animated element?) is animated without rerendering the component
+
+- ok, so useSpring returns animated values and an updater that updates those animated values
+
+- when the component is being animated, it is not being re-rendered?
+
+#So useSoring definitely returns an object
+- you can destructure the object being returned so you have access to each properties in the object passed to useSpring
+- const {transform, fontSize} = useSpring({
+  transform: toggled? translate3d(50px, 0, 0) : translate3d(0px, 0, 0),
+  fontSize: toggled? 24px: 12px
+})
+
+#You can have property that isn't formally recognized, that you will use for interpolate, that means it will only hold values
+- const {y} = useSpring({
+  y: toggled? 50 : 0
+})
+
+<animated.h1 style={{fontSize: y.interpolate(y => `${y}px`)}}>Hello </animated.h1> 
+- so when styling in JSX, the first curly brace is to signal we're on javascript land
+- second curly brace is to signal object in javascript
+- the object's properties are the styles - fontSize, color, transform
+- the values are strings - '24px', 'pink', 'rotate(90deg)'
+
+- when you have a not official property like y in useSpring, you use that value for other css properties
+- the interpolate method takes in a callback that uses the y value and returns a property that uses that y value
+
+#So what is actually happening when you do useSpring
+- so you useSpring and give it the value of an object
+- it returns an object whose properties are css properties and values
+- it can also return an object with unofficial properties and values
+- the css properties have accepted units, fontSize accepts px, em, rem, color accepts hsl, string names
+- the unofficial properties can be any value, they just have to be interpolated
+- the unofficial properties are a two parter, in useSpring and then in the style property where the property have to be interpolated and the value has to be extracted and then be used to complete a css property
+- whereas when the properties are already css properties, further processing of the information is not necessary, it can just be style={moveUp} where moveUp is transform3d(0, 50px, 0)
+- okay, so css properties in useSpring can be used straight up
+- unofficial properties in useSpring have to be processed further
+- what's the advantage of interpolated values? well, they are open ended
+- css properties, while easier to use, are also boxed in a role
+- interpolated values, while having to be processed further, can be applied to whatever you can think of
+
+#Okay, so when you do useSpring, you're returning an object whose properties are styles
+- some are standard properties, which can be used right away by plugging it in the styles attribute in the animated.element
+- some are not standard properties, and will have to be processed further to be able to be used as styles in the style attribute in the animated.element
+- so when you do useSpring, you're returning an object which will be used for the element that is extended to receive animated values
+- the object is a bunch of css styles
+- the object can also have properties that are not standard css properties, for these cases, they have to be interpolated to be used as css properties. In these cases, the values are just values, you have to place the values yourself, and they can be in any css properties you choose
+
+#Errors
+  const {x} = useSpring({
+    x: toggled ? 50 : 0,
+  })
+
+  ...in animated.rect
+  //   style={{strokeWidth:`${x}`}}
+  // style={{strokeWidth = x.interpolate(x => `${x}`)}}
+  style={{strokeWidth : x.interpolate(x => `${x}`)}}
+
+- so my first mistake was just doing strokeWidth : is what x evaluates to
+- however, x is not an official property and has to be processed before its value is understood
+- you have to do x.interpolate(callback that returns a value for the css property)
+
+- second mistake was using = instead of :
+- in JSX, you're giving an object to the style attribute
+- so first curly brace signals that you are on javascript land
+- second curly brace signals that this is an object
+- the way JSX is styled is through objects
+
+#I'm having trouble with svg

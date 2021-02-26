@@ -7,6 +7,13 @@ import {Rotate} from './components/Rotate';
 import { TransformTranslate } from "./components/TransformTranslate";
 import { Rotate30 } from "./components/Rotate30";
 import { Comparison } from "./components/Comparison";
+import { InterpolateA } from "./components/InterpolateA";
+import { InterpolateB } from "./components/InterpolateB";
+import { InterpolateC } from './components/InterpolateC';
+import { InterpolateD } from "./components/InterpolateD";
+import { SvgExperiment} from './components/SvgExperiment';
+import { InterpolateE } from "./components/InterpolateE";
+
 
 function App() {
   const fadeIn = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } });
@@ -23,6 +30,12 @@ function App() {
       <TransformTranslate />
       <Rotate30 />
       <Comparison />
+      <InterpolateA />
+      <InterpolateB />
+      <InterpolateC />
+      <InterpolateD />
+      <SvgExperiment />
+      <InterpolateE />
     </div>
   );
 }

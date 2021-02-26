@@ -18,6 +18,6 @@ body {
   height: 50px;
 }
 
-.comparison h1, .comparison p {
+.comparison h1, .comparison p, .interpolate-d p, .interpolate-e p {
   font-size: 12px;
 }
