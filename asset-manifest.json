@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/explore-react-spring/static/css/main.616e84b1.chunk.css",
+    "main.js": "/explore-react-spring/static/js/main.b918a15a.chunk.js",
+    "main.js.map": "/explore-react-spring/static/js/main.b918a15a.chunk.js.map",
+    "runtime-main.js": "/explore-react-spring/static/js/runtime-main.2e7abe5f.js",
+    "runtime-main.js.map": "/explore-react-spring/static/js/runtime-main.2e7abe5f.js.map",
+    "static/js/2.4fa705fd.chunk.js": "/explore-react-spring/static/js/2.4fa705fd.chunk.js",
+    "static/js/2.4fa705fd.chunk.js.map": "/explore-react-spring/static/js/2.4fa705fd.chunk.js.map",
+    "index.html": "/explore-react-spring/index.html",
+    "static/css/main.616e84b1.chunk.css.map": "/explore-react-spring/static/css/main.616e84b1.chunk.css.map",
+    "static/js/2.4fa705fd.chunk.js.LICENSE.txt": "/explore-react-spring/static/js/2.4fa705fd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e7abe5f.js",
+    "static/js/2.4fa705fd.chunk.js",
+    "static/css/main.616e84b1.chunk.css",
+    "static/js/main.b918a15a.chunk.js"
+  ]
+}
