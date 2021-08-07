@@ -1,0 +1,21 @@
+.first-experiments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: 24px 36px;
+}
+
+.first-experiments > * {
+    border: 2px solid black;
+    padding: 24px;
+}
+
+.grid-animation-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "left right";
+}
+
+.first-experiments img {
+    width: 100px;
+}
