@@ -9,3 +9,13 @@
     border: 2px solid black;
     padding: 24px;
 }
+
+.grid-animation-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "left right";
+}
+
+img {
+    width: 100px;
+}

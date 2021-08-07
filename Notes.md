@@ -228,3 +228,6 @@
 - the way JSX is styled is through objects
 
 #I'm having trouble with svg
+
+# Aw, I was trying to see if an element can be animated when it changes grid position. It seems like it can't? Unless I didn't name the property correctly. The original property is grid-area and I did gridArea because it is javascript.
+

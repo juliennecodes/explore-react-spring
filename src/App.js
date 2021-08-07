@@ -13,6 +13,8 @@ import { InterpolateC } from './components/InterpolateC';
 import { InterpolateD } from "./components/InterpolateD";
 import { SvgExperiment} from './components/SvgExperiment';
 import { InterpolateE } from "./components/InterpolateE";
+import { GridAnimation } from "./components/GridAnimation";
+import {Image} from "./components/Image";
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
       <InterpolateD />
       <SvgExperiment />
       <InterpolateE />
+      <GridAnimation />
+      <Image />
     </div>
   );
 }
