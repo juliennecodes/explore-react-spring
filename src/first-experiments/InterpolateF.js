@@ -45,7 +45,7 @@ export function InterpolateF() {
   );
 }
 
-function randomColour(colours) {
+export function randomColour(colours) {
   const i = Math.floor(Math.random() * colours.length);
   return colours[i];
 }
