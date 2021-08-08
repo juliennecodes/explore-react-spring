@@ -1,12 +1,13 @@
 import './App.css';
-import { FirstExperiments } from './first-experiments/FirstExperiments';
+import { SlidingMenu } from './second-experiments/SlidingMenu';
+// import { FirstExperiments } from './first-experiments/FirstExperiments';
 
 function App() {
 
 
   return (
     <div className="App">
-      <FirstExperiments />
+      <SlidingMenu />
     </div>
   );
 }

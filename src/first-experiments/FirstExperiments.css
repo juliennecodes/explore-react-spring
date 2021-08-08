@@ -1,21 +1,42 @@
 .first-experiments {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin: 24px 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px 36px;
 }
 
 .first-experiments > * {
-    border: 2px solid black;
-    padding: 24px;
+  border: 2px solid black;
+  padding: 24px;
 }
 
 .grid-animation-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "left right";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "left right";
 }
 
 .first-experiments img {
-    width: 100px;
+  width: 100px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+}
+
+.block {
+  display: block;
+}
+
+.shape {
+  width: 50px;
+  height: 50px;
+}
+
+.comparison h1,
+.comparison p,
+.interpolate-d p,
+.interpolate-e p {
+  font-size: 12px;
 }

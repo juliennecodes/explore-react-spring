@@ -1,0 +1,26 @@
+.nav-wrapper {
+    background-color: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+
+}
+
+.sliding-menu-close-button {
+    align-self: flex-start;
+    justify-self: flex-end;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.sliding-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
